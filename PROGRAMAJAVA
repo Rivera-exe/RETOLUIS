@@ -1,0 +1,419 @@
+package reto6;
+import java.util.Scanner;
+
+public class Reto6{
+
+	/**
+	 * Metodo para crear y rellenar el array con las 20 preguntas sobre CANADA 
+	 * @param TAM parametro para indicar el tamano del array
+	 * @return  del array de preguntas existentes
+	 */
+
+	public static String[] crearRellenarArrayUniString(int TAM){
+		String array[] = new String [TAM];
+
+		array[0] = "¿Cuál es el animal más emblemático de Canadá?";
+		array[1] = "¿Cuál es la capital de Canadá?";
+		array[2] = "¿Cuál es la moneda oficial de Canadá?";
+		array[3] = "¿Qué idiomas se hablan en Canadá?";
+		array[4] = "¿Qué animal es un símbolo representativo de Canadá?";
+		array[5] = "¿Cuál es el lago más grande de Canadá?";
+		array[6] = "¿Cuál es la bebida alcohólica nacional de Canadá?";
+		array[7] = "¿Cuál es la comida nacional de Canadá?";
+		array[8] = "¿Qué festividad se celebra en Canadá el 1 de julio?";
+		array[9] = "¿Qué deporte es muy popular en Canadá y a menudo se considera parte de su identidad nacional?";
+		array[10] = "¿Qué famosa catarata se encuentra en la frontera entre Canadá y Estados Unidos?";
+		array[11] = "¿Qué famoso evento anual se celebra en Canadá en febrero y presenta esculturas de hielo?";
+		array[12] = "¿Qué animal aparece en la moneda de 25 centavos de Canadá?";
+		array[13] = "¿Qué significa el nombre Canadá según la lengua indígena iroquesa?";
+		array[14] = "¿Dónde se encuentra Canadá geográficamente?";
+		array[15] = "¿Qué lago de Canadá es famoso por tener agua cristalina y ser uno de los lagos más profundos del mundo?";
+		array[16] = "¿Cuál es el segundo idioma oficial de Canadá?";
+		array[17] = "¿Cuál es el nombre de la moneda de 1 dólar en Canadá?";
+		array[18] = "¿Cuál es la flor oficial de Canadá?";
+		array[19] = "¿Cuál es la población aproximada de Canadá en la actualidad?";
+
+		return array;
+	}
+
+	/**
+	 * Metodo para saber cual es la respuesta correcta del array crearRellenarArrayBidiString
+	 * @param TAM parametro para indicar el tamano del array
+	 * @return del array con las respuesta correcta de cada pregunta
+	 */
+
+	public static char[] crearRellenarArrayUniChar(int TAM){
+		char array[] = new char [TAM];
+
+		array[0] = 'a'; // Respuesta correcta: Castor
+		array[1] = 'a'; // Respuesta correcta: Ottawa
+		array[2] = 'b'; // Respuesta correcta: Dólar canadiense
+		array[3] = 'a';// Respuesta correcta : Inglés y francés
+		array[4] = 'b'; // Respuesta correcta: Alce
+		array[5] = 'a'; // Respuesta correcta: Lago Superior
+		array[6] = 'c'; // Respuesta: Whisky
+		array[7] = 'c'; // Respuesta: Hoja de arce y jarabe de arce
+		array[8] = 'b'; // Respuesta correcta: Día de Canadá
+		array[9] = 'c'; // Respuesta correcta: Hockey sobre hielo
+		array[10] = 'c'; // Respuesta: Cataratas del Niágara
+		array[11] = 'c'; // Respuesta correcta: Festival de Invierno de Quebec
+		array[12] = 'b'; // Respuesta correcta: Caribú
+		array[13] = 'a'; // Respuesta correcta: Tierra de los bosques
+		array[14] = 'b'; // Respuesta correcta: En América del Norte
+		array[15] = 'a'; // Respuesta correcta: Lago Louise
+		array[16] = 'a'; // Respuesta correcta: Francés
+		array[17] = 'c'; // Respuesta correcta: Loonie
+		array[18] = 'c'; // Respuesta correcta: Trillium
+		array[19] = 'b'; // Respuesta correcta: 40 millones
+
+		return array;
+	}
+
+
+	/**
+	 * Metodo que crea y devuelve un array unidimensional
+	 * @return
+	 */
+
+	public static char[] crearArrayUniChar(){
+		char array[] = new char [10];
+		
+		return array;
+	}
+
+	/**
+	 * Metodo para las tres posibles respuestas de cada pregunta
+	 * @param TAM
+	 * @return
+	 */
+
+	public static String[][] crearRellenarArrayBidiString(int TAM){
+		String array[][] = new String [3][TAM];
+
+		array = new String[][]{
+			{"a) Castor", "b) Alce", "c) Mapache"},
+			{"a) Ottawa.", "b) Toronto.", "c) Vancouver."},
+			{"a) Euro", "b) Dólar canadiense", "c) Peso canadiense"},
+			{"a) Inglés y francés", "b) Inglés y español", "c) Francés y alemán"},
+			{"a) Águila", "b) Alce", "c) Oso polar"},
+			{"a) Lago Superior", "b) Lago Ontario", "c) Lago de los Esclavos"},
+			{"a) Cerveza", "b) Vino", "c) Whisky"},
+			{"a) Pizza", "b) Poutine", "c) Hoja de arce y jarabe de arce"},
+			{"a) Día de la Independencia", "b) Día de Canadá", "c) Día del Trabajo"},
+			{"a) Fútbol", "b) Béisbol", "c) Hockey sobre hielo"},
+			{"a) Cataratas Victoria", "b) Cataratas del Iguazú", "c) Cataratas del Niágara"},
+			{"a) Festival de la Cosecha", "b) Festival de Jazz de Montreal", "c) Festival de Invierno de Quebec"},
+			{"a) Lobo", "b) Caribú", "c) Ballena"},
+			{"a) Tierra de los bosques", "b) Río congelado", "c) Aldea grande"},
+			{"a) En Europa", "b) En América del Norte", "c) En Asia"},
+			{"a) Lago Louise", "b) Lago Moraine", "c) Lago Maligne"},
+			{"a) Francés", "b) Español", "c) Alemán"},
+			{"a) Dólar de plata", "b) Dólar de oro", "c) Loonie"},
+			{"a) Rosa", "b) Trébol", "c) Trillium"},
+			{"a) 30 millones", "b) 40 millones", "c) 50 millones"}
+		};
+		return array;
+	}
+
+
+	/**
+	 * Metodo para elegir que 10 preguntas van a ser seleccionadas entre las 20 existentes
+	 * @param arrayPreguntas
+	 * @param arrayRespuestas
+	 * @param arrayRespuestasShort
+	 * @return
+	 */
+	public static String[] crearRellenarArrayPreguntas(String [] arrayPreguntas, char []arrayRespuestas, char[]arrayRespuestasShort){
+		String array[] = new String [10];
+		int r, evitarRep[] = new int [10];
+		boolean repetido = false;
+
+		for (int i = 0; i < array.length; i++){
+			do {
+				r = (int) (Math.random()*20);
+				repetido = false;
+				evitarRep[i] = r;
+				for(int j = 0; j < i; j++) {
+					if(r == evitarRep[j]) {
+						repetido = true;
+						i--;
+					}
+				}
+			}while(repetido);
+			array[i] = arrayPreguntas[r];
+			arrayRespuestasShort[i] = arrayRespuestas[r];
+		}
+
+		return array;
+	}
+
+
+	/**
+	 * Metodo para obtener una puntuacion, genera una variable la cual acumulara los aciertos
+	 * el usuario ingrese su respuesta, La entrada se convierte a minúsculas y se toma solo el primer carácter.
+	 * si el usuario acierta gana 1 punto, para asegurarse que el usuario mete una a,b o c se crea una validacion 
+	 * ademas tambien llamo a un metodo el cual obtiene el índice de la pregunta actual en el array de preguntas originales
+	 * para que al pregunta y las posibles respuesta coincidan
+	 * @param arraySeleccionadas
+	 * @param arrayRespuestasShort
+	 * @param arrayOpciones
+	 * @return
+	 */
+
+	public static int preguntasQuiz(String[] arraySeleccionadas, char[] arrayRespuestasShort, String[][] arrayOpciones) {
+		Scanner sc = new Scanner(System.in);
+		char resp;
+		int puntuacion = 0;
+		int indexPreguntaOriginal;
+
+		System.out.println("\n¡Bienvenido al juego de Canadá!");
+		System.out.println("\nResponde las siguientes preguntas, ¡y veremos cuanto sabes sobre nuestro país");
+
+		for (int i = 0; i < arraySeleccionadas.length; i++) {
+			System.out.println();
+			System.out.println((i+1) + ". " + arraySeleccionadas[i]);
+
+			// Obtener el índice de la pregunta actual en el array de preguntas originales
+			indexPreguntaOriginal = buscarIndicePregunta(arraySeleccionadas[i]);
+
+			// Imprimir las opciones correspondientes a la pregunta actual
+			for (int j = 0; j < 3; j++) {
+				System.out.println(arrayOpciones[indexPreguntaOriginal][j]);
+			}
+
+			System.out.print("Respuesta : ");
+			do {
+				resp = sc.next().toLowerCase().charAt(0);
+				if (resp != 'a' && resp != 'b' && resp != 'c') {
+					System.out.println("Por favor, ingresa 'a', 'b' o 'c'");
+				}
+			} while (resp != 'a' && resp != 'b' && resp != 'c');
+
+			if (resp == arrayRespuestasShort[i]) {
+				puntuacion++;
+			}
+		}
+
+		return puntuacion;
+	}
+
+	
+	/**
+	 * Metodo el cual busca el indice en arraypreguntas para que la pregunta y sus posibles opciones concuerden
+	 * @param pregunta
+	 * @return
+	 */
+	public static int buscarIndicePregunta(String pregunta) {
+		final int TAM = 20;
+		String[] arrayPreguntas = crearRellenarArrayUniString(TAM);
+		for (int i = 0; i < arrayPreguntas.length; i++) {
+			if (arrayPreguntas[i].equals(pregunta)) {
+				return i;
+			}
+		}
+		return -1; // Si no se encuentra la pregunta, devolver -1
+	}
+
+	/**
+	 * Metodo que imprime la presentacion el ahorcado
+	 */
+	public static void presentacionAhorcado() {
+		System.out.println("\n\nVamos a jugar a un juego, ¡el ahorcado!");
+		System.out.println("\n¿Te ves capaz de adivinar la palabra relacionada con Canadá?\n\n");
+	}
+
+	/**
+	 * Metodo que crea el array con las palabras del ahorcado, ademas de asignar las palabras que se van a usar para el juego.
+	 * @return
+	 */
+	public static String[] palabrasAhorcado() {
+		String array[] = new String[10];
+
+		//Declaramos las palabras que queremos usar para el ahorcado, metiendolas en el string recien creado.
+		array = new String [] {"OTTAWA","HOCKEY", "CASTOR", "CANADA", "TORONTO", "NIAGARA", "VANCOUVER", "HOJA", "ALCE", "WENDIGO"};
+
+		return array;
+	}
+	/**
+	 * Metodo que elige de manera aleatoria la palabra para el ahorcado y la guarda en un array de tipo char
+	 * @param arrayPalabras - parametro con el array de las palabras en modo String
+	 * @return - devuelve el array de la palabra elegida convertido en char
+	 */
+	public static char[] arrayPalabraChar(String[] arrayPalabras) {
+		char array[];
+		int r;
+		String palabra;
+
+		r = (int)(Math.random()*10); //Eleccion aleatoria de un numero entre 0 y 9
+		palabra = arrayPalabras[r]; //Darle a la variable palabra el valor dentro de la casilla relacionada con el numero aleatorio
+
+		array = palabra.toCharArray(); //Conversion de la palabra a un array de tipo char
+
+		return array;
+	}
+	/**
+	 * Metodo que crea un array de tipo char del tamaño de la palabra y lo rellena con el caracter "_"
+	 * @param arrayPalabraChar - parametro del array con la palabra en formato char
+	 * @return - devolucion del array relleno con el caracter "_"
+	 */
+	public static char[] crearRellenarArrayAhorcado(char[] arrayPalabraChar) {
+		char array[] = new char[arrayPalabraChar.length];
+
+		for (int i = 0; i < array.length; i++) {
+			array[i] = '_';
+		}
+
+		return array;
+	}
+	/**
+	 * Metodo que crea un array vacio del mismo tamaño que la palabra
+	 * @param arrayPalabraChar - parametro con el array de la palabra en formato char
+	 * @return - devolucion del array del tamaño de la palabra
+	 */
+	public static char[] arrayAhorcadoFinal(char[] arrayPalabraChar) {
+		char array[];
+
+		array = new char [arrayPalabraChar.length]; //Le damos al array nuevo el tamaño de la palabra en formato char
+
+		return array;
+	}
+	/**
+	 * Metodo que representa las vidas del jugador
+	 * @return - devolucion del array con las vidas
+	 */
+	public static String[] vidas() {
+		String array[];
+
+		array = new String [] {" "," * "," * * "," * * * "," * * * * "," * * * * * "}; //Rellenamos el array con los asteriscos que representan las vidas
+
+		return array;
+	}
+	/**
+	 * Metodo que resta vidas
+	 * @param vida - parametro recibido del metodo ahorcado que representa un numero
+	 * @return - devuelve el numero que indicara la posicion que tiene el array vida en el momento
+	 */
+	public static int restarVida(int vida) {
+		vida--;
+		return vida;
+	}
+	/**
+	 * Metodo del juego del ahorcado
+	 * @param arrayPalabraChar - parametro con el array de la palabra en formato char
+	 * @param arrayAhorcado - parametro del array del tamaño de la palabra
+	 * @param vidas - parametro del array con las vidas
+	 * @param caracteresAhorcado - parametro del array a rellenar
+	 * @return - devolucion de la booleana de si se ha adivinado la palabra o no
+	 */
+	public static int ahorcado(char[] arrayPalabraChar, char[] arrayAhorcado, String[] vidas, char[] caracteresAhorcado) {
+		Scanner sc = new Scanner(System.in);
+		char array[], resp;
+		int vida = 5;
+		boolean adivinado = false, letra = false, igual = true;
+
+		array = new char [arrayPalabraChar.length]; //damos al nuevo array el tamaño de la palabra
+
+		for (int i = 0; i < arrayPalabraChar.length; i++) {
+			array[i]=caracteresAhorcado[i]; //Hacemos que el nuevo array tome los caracteres "_"
+		}
+
+		for (int i = 0; i < array.length; i ++) {
+			System.out.print(array[i] + " ");
+		}
+
+		while (!adivinado && vida > 0) {
+			letra = false;
+			igual = true;
+			do {
+				System.out.println("\n\nIntroduce una letra: ");
+				resp = sc.next().toUpperCase().charAt(0); //Leer la entrada del usuario y convertirla a mayúsculas
+				if (!(resp >= 'A' && resp <= 'Z')) { //Comprobar si el caracter introducido está entre la A y la Z
+					System.out.println("Por favor, introduce una letra.");
+				}
+			} while (!(resp >= 'A' && resp <= 'Z')); //Comprobar si el caracter introducido está entre la A y la Z
+
+			System.out.println();
+
+			for (int i = 0; i < array.length; i++) {
+				if(resp==arrayPalabraChar[i]) { //Comprobamos si la letra introducida coincide con alguna de las letras del ahorcado
+					array[i]=resp;
+					letra = true;
+				}
+				System.out.print(array[i] + " ");	
+			}
+			if(letra == false) {
+				vida = restarVida(vida); //En caso de que no coincida ninguna letra, se nos resta una vida
+			}
+
+			System.out.println("\n\nVidas:" + vidas[vida]);
+
+			if(!adivinado) {
+				for(int i = 0; i < arrayPalabraChar.length; i++) {
+					if (arrayPalabraChar[i] != array[i]) {
+						igual = false;
+					}
+				}
+			}
+			if (igual) {
+				adivinado = true;
+			}
+		}
+		finAhorcado(adivinado, arrayPalabraChar);
+		return vida;
+	}
+	/**
+	 * Metodo de fin del ahorcado
+	 * @param adivinado - parametro que indica si se ha adivinado la palabra o no
+	 * @param arrayPalabraChar - parametro del array que indica la palabra elegida
+	 */
+	public static void finAhorcado(boolean adivinado, char[] arrayPalabraChar) {
+		if (adivinado) {
+			System.out.println("\n¡Felicidades! Has adivinado la palabra."); //Texto que sale en caso de ganar el ahorcado
+		}else {
+			System.out.println("\n¡Has perdido! La palabra era " + String.valueOf(arrayPalabraChar) +"."); //Texto que sale en caso de perder el ahorcado
+		}
+	}
+
+
+	/**
+	 * Metodo el cual imprima la puntuacion obtenida al final del programa y las vidas restantes
+	 * @param puntuacion
+	 * @param vida
+	 */
+	public static void finPrograma(int puntuacion, int vida) {
+		int vidaRes = vida*2;
+		float resultado;
+
+		resultado = (float)(puntuacion+vidaRes)/2;
+
+		System.out.println("\n\n--------------------------------------\n\n");
+		System.out.println("Tu puntuación es de " + resultado + "/10");
+		System.out.println("\nDesglose de puntos: ");
+		System.out.println("\tQuiz: "+ puntuacion + " puntos");
+		System.out.println("\tAhorcado: "+ vidaRes + " puntos");
+	}
+
+	public static void main (String []args){
+		final int TAM = 20;
+		String arrayPreguntas[], arrayOpciones[][], arraySeleccionadas[], arrayPalabras[], vidas[];
+		char arrayRespuestas[], arrayRespuestasShort[], arrayPalabraChar[], caracteresAhorcado[], arrayAhorcado[];
+		int puntuacion, vida;
+
+		arrayPreguntas = crearRellenarArrayUniString(TAM);
+		arrayRespuestas = crearRellenarArrayUniChar(TAM);
+		arrayRespuestasShort = crearArrayUniChar();
+		arrayOpciones = crearRellenarArrayBidiString(TAM);
+		arraySeleccionadas = crearRellenarArrayPreguntas(arrayPreguntas, arrayRespuestas, arrayRespuestasShort);
+		puntuacion = preguntasQuiz(arraySeleccionadas, arrayRespuestasShort, arrayOpciones);
+
+		presentacionAhorcado();
+		arrayPalabras = palabrasAhorcado();
+		arrayPalabraChar = arrayPalabraChar(arrayPalabras);
+		caracteresAhorcado = crearRellenarArrayAhorcado(arrayPalabraChar);
+		vidas = vidas();
+		arrayAhorcado = arrayAhorcadoFinal(arrayPalabraChar);
+		vida = ahorcado(arrayPalabraChar, arrayAhorcado, vidas, caracteresAhorcado);
+
+		finPrograma(puntuacion, vida);
+	}
+}
